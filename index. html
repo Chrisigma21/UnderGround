@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kozilan - Underground Artist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Kozilan</h1>
+      <p>Underground Artist</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="bio">
+      <h2>Om Kozilan</h2>
+      <p>
+        Kozilan er en norsk underground artist med en unik lyd som blander mørke, intense beats med dype, personlige tekster. Hans musikk tar deg med på en reise gjennom både angst og håp, alltid med en ærlig og ufiltrert tilnærming til livet.
+      </p>
+    </section>
+
+    <section class="music">
+      <h2>Hør Musikk</h2>
+      <p>Velg en av sangene nedenfor for å høre på:</p>
+
+      <!-- Knappene for å bytte sanger -->
+      <button class="song-btn" onclick="changeSong('song1')">Sang 1: [Tittel på sangen]</button>
+      <button class="song-btn" onclick="changeSong('song2')">Sang 2: [Tittel på sangen]</button>
+      <button class="song-btn" onclick="changeSong('song3')">Sang 3: [Tittel på sangen]</button>
+      
+      <!-- SoundCloud spiller som endres dynamisk -->
+      <div id="player-container">
+        <iframe id="soundcloud-player" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=INSERT_SOUNDCLOUD_URL_HERE&color=ff5500"></iframe>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Kontakt</h2>
+      <p>Vil du høre mer? Kontakt Kozilan via sosiale medier eller e-post.</p>
+      <p>Email: <a href="mailto:kozi@example.com">kozi@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kozilan. Alle rettigheter reservert.</p>
+  </footer>
+
+  <script>
+    function changeSong(songId) {
+      let playerUrl = '';
+      
+      // Sett URL for de ulike sangene (bytt ut med de faktiske SoundCloud URLene)
+      if (songId === 'song1') {
+        playerUrl = 'https://w.soundcloud.com/player/?url=INSERT_SOUNDCLOUD_URL_SONG1&color=ff5500';
+      } else if (songId === 'song2') {
+        playerUrl = 'https://w.soundcloud.com/player/?url=INSERT_SOUNDCLOUD_URL_SONG2&color=ff5500';
+      } else if (songId === 'song3') {
+        playerUrl = 'https://w.soundcloud.com/player/?url=INSERT_SOUNDCLOUD_URL_SONG3&color=ff5500';
+      }
+
+      // Endre src-verdien på iframe for å laste den valgte sangen
+      document.getElementById('soundcloud-player').src = playerUrl;
+    }
+  </script>
+  p
+</body>
+</html>
